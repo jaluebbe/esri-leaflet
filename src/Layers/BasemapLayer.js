@@ -33,11 +33,11 @@ export var BasemapLayer = TileLayer.extend({
         }
       },
       Oceans: {
-        urlTemplate: tileProtocol + '//{s}.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}',
+        urlTemplate: tileProtocol + '//ibasemaps-api.arcgis.com/arcgis/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}',
         options: {
-          minZoom: 1,
-          maxZoom: 16,
-          subdomains: ['server', 'services'],
+          minZoom: 0,
+          maxZoom: 10,
+          ignoreDeprecationWarning: true,
           attribution: 'USGS, NOAA',
           attributionUrl: 'https://static.arcgis.com/attribution/Ocean_Basemap'
         }
@@ -101,11 +101,11 @@ export var BasemapLayer = TileLayer.extend({
         }
       },
       Imagery: {
-        urlTemplate: tileProtocol + '//{s}.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        urlTemplate: tileProtocol + '//ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
         options: {
-          minZoom: 1,
-          maxZoom: 19,
-          subdomains: ['server', 'services'],
+          minZoom: 0,
+          maxZoom: 21,
+          ignoreDeprecationWarning: true,
           attribution: 'DigitalGlobe, GeoEye, i-cubed, USDA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community',
           attributionUrl: 'https://static.arcgis.com/attribution/World_Imagery'
         }
